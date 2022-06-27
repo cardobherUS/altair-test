@@ -70,7 +70,7 @@ func (s *Service) Exec() (err error) {
 
 	redUser := s.GetTeamUserByID(id, definitions.RedTeam)
 	if strings.EqualFold(redUser.Team, "") {
-		log.Print("There is none on RED TEAM with the ID:", id)
+		log.Print("There is none on RED TEAM with the ID: ", id)
 	} else {
 		word := strings.ToLower(redUser.Word)
 		wordR := s.Tools.Reverse(word) //Here we check if the word of the user is palindrome
@@ -91,7 +91,7 @@ func (s *Service) Exec() (err error) {
 
 	blueUser := s.GetTeamUserByID(id, definitions.BlueTeam)
 	if strings.EqualFold(blueUser.Team, "") {
-		log.Print("There is none on BLUE TEAM with the ID:", id)
+		log.Print("There is none on BLUE TEAM with the ID: ", id)
 	} else {
 		count := s.Tools.CountVowels(strings.ToLower(blueUser.Word)) //Here we check if the word has at least 5 vowels
 		if count >= 5 {
