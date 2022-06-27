@@ -1,11 +1,14 @@
 package definitions
 
 const (
-	BLUE_T = "azul"
-	RED_T  = "rojo"
+	BlueT = "azul"
+	RedT  = "rojo"
 )
 
-var RedTeam, BlueTeam []User
+var (
+	BlueTeam []User
+	RedTeam  []User
+)
 
 type User struct {
 	Id      string `json:"id"`
@@ -17,10 +20,10 @@ type User struct {
 }
 
 var Users = []User{
-	{Id: "AAA", Name: "Javier", Surname: "Miguez", Team: RED_T, Age: 44, Word: "riachuelo"},
-	{Id: "AAB", Name: "Luis", Surname: "Alonso", Team: BLUE_T, Age: 32, Word: "murcielago"},
-	{Id: "ABA", Name: "Cristina", Surname: "Perez", Team: BLUE_T, Age: 21, Word: "solos"},
-	{Id: "ABB", Name: "Mariano", Surname: "Gomez", Team: RED_T, Age: 18, Word: "reconocer"},
-	{Id: "BAA", Name: "Alicia", Surname: "Domenech", Team: RED_T, Age: 32, Word: "oso"},
-	{Id: "BBA", Name: "Susana", Surname: "Gomez", Team: BLUE_T, Age: 19, Word: "elefante"},
+	{Id: "AAA", Name: "Javier", Surname: "Miguez", Team: RedT, Age: 44, Word: "riachuelo"},
+	{Id: "AAB", Name: "Luis", Surname: "Alonso", Team: BlueT, Age: 32, Word: "murcielago"},
+	{Id: "ABA", Name: "Cristina", Surname: "Perez", Team: BlueT, Age: 21, Word: "solos"},
+	{Id: "ABB", Name: "Mariano", Surname: "Gomez", Team: RedT, Age: 18, Word: "reconocer"},
+	{Id: "BAA", Name: "Alicia", Surname: "Domenech", Team: RedT, Age: 32, Word: "oso"},
+	{Id: "BBA", Name: "Susana", Surname: "Gomez", Team: BlueT, Age: 19, Word: "elefante"},
 }

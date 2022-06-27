@@ -30,9 +30,9 @@ func NewService(tools utils.ToolsI) ServiceI {
 func (s *Service) CreateTeams() {
 	for _, us := range definitions.Users {
 		switch us.Team {
-		case definitions.RED_T:
+		case definitions.RedT:
 			definitions.RedTeam = append(definitions.RedTeam, us)
-		case definitions.BLUE_T:
+		case definitions.BlueT:
 			definitions.BlueTeam = append(definitions.BlueTeam, us)
 		}
 	}
